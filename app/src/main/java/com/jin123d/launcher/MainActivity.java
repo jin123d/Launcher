@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         getPackageList();
     }
 
+    /**
+     * 列举应用列表
+     */
     private void getPackageList() {
         Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
         mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
@@ -50,12 +53,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * 屏蔽返回键
+     */
     @Override
     public void onBackPressed() {
     }
 
 
-    public class CollatorComparator implements Comparator<AppItemBean> {
+    /**
+     * 按照appName排序
+     */
+    private class CollatorComparator implements Comparator<AppItemBean> {
         Collator collator = Collator.getInstance();
 
         @Override

@@ -10,3 +10,4 @@
 ```
 android:excludeFromRecents="true"
 ```
+ ![image](pic/device-2017-08-02-150019.png)
